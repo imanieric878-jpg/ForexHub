@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ImanFx TradingHub | Forex Trader, Technical Analyst & Forex Mentor</title>
+    <title>ImanFx TradingHub | Forex Trader</title>
     <meta name="description"
         content="ImanFx TradingHub by Iman FX — Forex trader, technical analyst and Forex mentor offering market analysis, trading education, trading resources and personalized mentorship for developing traders.">
     <meta name="keywords"
@@ -17,14 +17,14 @@
     <meta property="og:description"
         content="Forex market analysis, trading education, practical resources and personalized mentorship with a disciplined, invalidation-focused approach.">
     <!-- These image tags create the link preview thumbnail on WhatsApp, iMessage, etc. -->
-    <meta property="og:image" content="https://imanfxtradinghub.vercel.app/assets/preview-logo.jpg">
+    <meta property="og:image" content="https://imanfxtradinghub.vercel.app/assets/preview-logo.png">
     <meta property="og:image:width" content="736">
     <meta property="og:image:height" content="736">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="ImanFx TradingHub | Forex Trader, Technical Analyst & Forex Mentor">
     <meta name="twitter:description"
         content="Forex market analysis, trading education, practical resources and personalized mentorship with a disciplined, invalidation-focused approach.">
-    <meta name="twitter:image" content="https://imanfxtradinghub.vercel.app/assets/preview-logo.jpg">
+    <meta name="twitter:image" content="https://imanfxtradinghub.vercel.app/assets/preview-logo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -121,13 +121,9 @@
                 class="fixed top-0 left-0 right-0 z-50 transition-colors duration-300 bg-transparent border-b border-transparent">
                 <nav class="w-full flex items-center justify-between px-4 md:px-10 h-16 md:h-20">
                     <a href="#top" class="flex items-center gap-3 cursor-pointer shrink-0">
-                        <span
-                            class="w-9 h-9 flex items-center justify-center rounded-md font-heading font-bold text-sm tracking-tight transition-colors duration-300 bg-background-50 text-primary-700">IF</span>
+                        <img src="assets/weblogo.png" alt="ImanFx TradingHub Logo"
+                            class="h-10 md:h-12 w-auto object-contain">
                         <span class="leading-tight">
-                            <span
-                                class="nav-logo-text block font-heading font-semibold text-sm md:text-base tracking-tight transition-colors duration-300 text-background-50">
-                                ImanFx TradingHub
-                            </span>
                             <span
                                 class="nav-sub-text hidden sm:block font-mono-label text-[10px] uppercase tracking-[0.18em] transition-colors duration-300 text-background-300">Forex
                                 Trader & Analyst</span>
@@ -176,7 +172,8 @@
                     <div class="absolute inset-0 w-full h-full">
                         <img alt="Abstract Forex market chart visual representing ImanFx TradingHub market analysis"
                             title="ImanFx TradingHub Forex market analysis"
-                            class="w-full h-full object-cover object-top" src="assets/1e6bdf94efe3c8743adb942eaa8f579b.jpg">
+                            class="w-full h-full object-cover object-top"
+                            src="assets/1e6bdf94efe3c8743adb942eaa8f579b.jpg">
                     </div>
                     <div
                         class="absolute inset-0 bg-gradient-to-b from-foreground-950/80 via-foreground-950/65 to-foreground-950/85">
@@ -309,7 +306,8 @@
                                 <div class="relative w-full aspect-[4/5] rounded-lg overflow-hidden bg-background-200">
                                     <img alt="Iman FX disciplined Forex trading workspace and analysis setup"
                                         title="Iman FX Forex trader and technical analyst"
-                                        class="w-full h-full object-cover" src="assets/27beac308bdc466220a02a352a7361d0.jpg">
+                                        class="w-full h-full object-cover"
+                                        src="assets/27beac308bdc466220a02a352a7361d0.jpg">
                                     <div
                                         class="absolute left-4 bottom-4 right-4 rounded-md bg-background-50/95 backdrop-blur-sm p-4">
                                         <p
@@ -548,11 +546,11 @@
                                 </div>
                                 <h2
                                     class="mt-4 font-heading text-2xl md:text-3xl lg:text-4xl font-semibold leading-[1.15] tracking-tightest text-foreground-950">
-                                    Educational resources and mentorship
+                                    Mentorship and learning resources
                                     <span class="text-primary-600">built around process.</span>
                                 </h2>
                                 <p class="mt-4 text-sm md:text-base leading-relaxed text-foreground-600">
-                                    Each offering is designed to help traders improve their understanding, structure and
+                                    These services help traders improve their understanding, structure, and
                                     decision-making. All material is educational and does not guarantee profits.
                                 </p>
                             </div>
@@ -1168,7 +1166,7 @@
 
             function updateHeader() {
                 if (!header) return;
-                
+
                 if (window.scrollY > 20) {
                     header.style.background = '#ffffff';
                     header.style.borderBottomColor = '#e5e7eb';
@@ -1254,7 +1252,7 @@
                             `;
                             contactForm.reset();
                             if (charCount) charCount.textContent = 'Max 500 characters';
-                            
+
                             // Handle OK button click to redirect to home/top
                             document.getElementById('toast-ok-btn').addEventListener('click', () => {
                                 formToast.classList.add('hidden');
