@@ -1,0 +1,1305 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ImanFx TradingHub | Forex Trader</title>
+    <meta name="description"
+        content="ImanFx TradingHub by Iman FX — Forex trader, technical analyst and Forex mentor offering market analysis, trading education, trading resources and personalized mentorship for developing traders.">
+    <meta name="keywords"
+        content="Forex trader, Forex mentor, technical analyst, Forex market analysis, trading education, Forex mentorship">
+    <meta name="author" content="Iman FX">
+    <meta name="last-modified" content="2026-09-12">
+    <meta name="theme-color" content="#10231d">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="ImanFx TradingHub">
+    <meta property="og:title" content="ImanFx TradingHub | Forex Trader, Technical Analyst & Forex Mentor">
+    <meta property="og:description"
+        content="Forex market analysis, trading education, practical resources and personalized mentorship with a disciplined, invalidation-focused approach.">
+    <!-- These image tags create the link preview thumbnail on WhatsApp, iMessage, etc. -->
+    <meta property="og:image" content="https://imanfxtradinghub.vercel.app/assets/preview-logo.png">
+    <meta property="og:image:width" content="736">
+    <meta property="og:image:height" content="736">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ImanFx TradingHub | Forex Trader, Technical Analyst & Forex Mentor">
+    <meta name="twitter:description"
+        content="Forex market analysis, trading education, practical resources and personalized mentorship with a disciplined, invalidation-focused approach.">
+    <meta name="twitter:image" content="https://imanfxtradinghub.vercel.app/assets/preview-logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.min.css">
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "name": "Iman FX",
+        "email": "imanieric878@gmail.com",
+        "jobTitle": "Forex Trader, Technical Analyst, Forex Mentor",
+        "description": "Iman FX is a Forex trader and technical analyst, and the creator of ImanFx TradingHub, focused on Forex market analysis, trading education, practical trading resources and personalized mentorship.",
+        "telephone": "0704372636",
+        "knowsAbout": ["Forex trading", "Technical analysis", "Trading education", "Trading discipline"]
+      },
+      {
+        "@type": "WebPage",
+        "name": "ImanFx TradingHub",
+        "description": "Official portfolio of ImanFX TradingHub – Forex market analysis, trading education, resources and mentorship."
+      }
+    ]
+  }
+</script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .fx-rise {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .fx-rise.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .fx-fade {
+            opacity: 0;
+            transition: opacity 1s ease-out;
+        }
+
+        .fx-fade.is-visible {
+            opacity: 1;
+        }
+
+        .fx-marquee {
+            animation: marquee 30s linear infinite;
+        }
+
+        @keyframes marquee {
+            0% {
+                transform: translateX(0%);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: { 50: '#f0fdf4', 100: '#dcfce7', 200: '#bbf7d0', 300: '#86efac', 400: '#4ade80', 500: '#22c55e', 600: '#16a34a', 700: '#15803d', 800: '#166534', 900: '#14532d', 950: '#052e16' },
+                        secondary: { 50: '#fdf8f6', 100: '#f2e8e5', 200: '#eaddd7', 300: '#e0cec7', 400: '#d2bab0', 500: '#a18072', 600: '#977669', 700: '#846358', 800: '#43302b', 900: '#1c1411', 950: '#1c1411' },
+                        background: { 50: '#F6F6F6', 100: '#E7E7E7', 200: '#D1D1D1', 300: '#B0B0B0', 400: '#888888', 500: '#6D6D6D', 600: '#5D5D5D', 700: '#4F4F4F', 800: '#454545', 900: '#3D3D3D', 950: '#1F1F1F' },
+                        foreground: { 50: '#F5F5F5', 100: '#E9E9E9', 200: '#D9D9D9', 300: '#C4C4C4', 400: '#9D9D9D', 500: '#7B7B7B', 600: '#555555', 700: '#434343', 800: '#262626', 900: '#101010', 950: '#101010' },
+                        accent: { 50: '#faf5fd', 100: '#f3e8fa', 200: '#e9d5f4', 300: '#d8b4eb', 400: '#c286df', 500: '#a758ce', 600: '#8c3bab', 700: '#732e8c', 800: '#612874', 900: '#50235f', 950: '#310d3e' },
+                    },
+                    fontFamily: {
+                        heading: ['Sora', 'sans-serif'],
+                        mono: ['IBM Plex Mono', 'monospace'],
+                        'mono-label': ['IBM Plex Mono', 'monospace'],
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div id="root">
+        <div class="min-h-screen w-full bg-background-50">
+            <header
+                class="fixed top-0 left-0 right-0 z-50 transition-colors duration-300 bg-transparent border-b border-transparent">
+                <nav class="w-full flex items-center justify-between px-4 md:px-10 h-16 md:h-20">
+                    <a href="#top" class="flex items-center gap-3 cursor-pointer shrink-0">
+                        <img src="assets/weblogo.png" alt="ImanFx TradingHub Logo"
+                            class="h-10 md:h-12 w-auto object-contain">
+                        <span class="leading-tight">
+                            <span
+                                class="nav-sub-text hidden sm:block font-mono-label text-[10px] uppercase tracking-[0.18em] transition-colors duration-300 text-background-300">Forex
+                                Trader & Analyst</span>
+                        </span>
+                    </a>
+                    <div class="hidden lg:flex items-center gap-8">
+                        <a href="#about"
+                            class="whitespace-nowrap font-mono-label text-xs uppercase tracking-[0.14em] transition-colors duration-200 cursor-pointer text-background-200 hover:text-background-50">About</a>
+                        <a href="#approach"
+                            class="whitespace-nowrap font-mono-label text-xs uppercase tracking-[0.14em] transition-colors duration-200 cursor-pointer text-background-200 hover:text-background-50">Approach</a>
+                        <a href="#services"
+                            class="whitespace-nowrap font-mono-label text-xs uppercase tracking-[0.14em] transition-colors duration-200 cursor-pointer text-background-200 hover:text-background-50">Services</a>
+                        <a href="#connect"
+                            class="whitespace-nowrap font-mono-label text-xs uppercase tracking-[0.14em] transition-colors duration-200 cursor-pointer text-background-200 hover:text-background-50">Connect</a>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <a href="#contact"
+                            class="hidden md:inline-flex items-center gap-2 whitespace-nowrap rounded-md bg-primary-500 px-5 py-2.5 font-heading text-sm font-medium text-background-50 transition-colors duration-200 hover:bg-primary-600 cursor-pointer">
+                            <i class="ri-chat-3-line"></i>
+                            Get in touch
+                        </a>
+                        <button type="button" aria-label="Toggle navigation menu"
+                            class="lg:hidden w-10 h-10 flex items-center justify-center rounded-md border transition-colors duration-200 cursor-pointer border-background-50/40 text-background-50 hover:bg-background-50/10 z-50 relative">
+                            <i class="text-xl ri-menu-line"></i>
+                        </button>
+                    </div>
+                    <div id="mobile-menu"
+                        class="fixed inset-0 top-16 md:top-20 z-40 bg-foreground-950 flex-col items-center justify-center gap-8 hidden lg:hidden">
+                        <a href="#about"
+                            class="font-heading text-lg text-background-50 hover:text-primary-400 transition-colors">About</a>
+                        <a href="#approach"
+                            class="font-heading text-lg text-background-50 hover:text-primary-400 transition-colors">Approach</a>
+                        <a href="#services"
+                            class="font-heading text-lg text-background-50 hover:text-primary-400 transition-colors">Services</a>
+                        <a href="#connect"
+                            class="font-heading text-lg text-background-50 hover:text-primary-400 transition-colors">Connect</a>
+                        <a href="#contact"
+                            class="mt-4 rounded-md bg-primary-500 px-6 py-3 font-heading text-sm font-medium text-background-50 hover:bg-primary-600 transition-colors">Get
+                            in touch</a>
+                    </div>
+                </nav>
+            </header>
+            <main class="w-full">
+                <section id="top"
+                    class="relative w-full min-h-[560px] md:min-h-[680px] lg:min-h-[720px] flex items-center overflow-hidden">
+                    <div class="absolute inset-0 w-full h-full">
+                        <img alt="Abstract Forex market chart visual representing ImanFx TradingHub market analysis"
+                            title="ImanFx TradingHub Forex market analysis"
+                            class="w-full h-full object-cover object-top"
+                            src="assets/1e6bdf94efe3c8743adb942eaa8f579b.jpg">
+                    </div>
+                    <div
+                        class="absolute inset-0 bg-gradient-to-b from-foreground-950/80 via-foreground-950/65 to-foreground-950/85">
+                    </div>
+                    <div class="relative z-10 w-full px-4 md:px-10 py-24 md:py-28">
+                        <div class="max-w-3xl">
+                            <div
+                                class="fx-fade inline-flex items-center gap-2 rounded-full border border-background-50/25 bg-background-50/10 px-4 py-1.5 backdrop-blur-sm">
+                                <span class="w-1.5 h-1.5 rounded-full bg-accent-400"></span>
+                                <span
+                                    class="font-mono-label text-[10px] md:text-[11px] uppercase tracking-[0.2em] text-background-100">ImanFx
+                                    TradingHub</span>
+                            </div>
+                            <h1
+                                class="fx-rise mt-6 font-heading font-semibold text-background-50 text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-[1.08] tracking-tightest">
+                                Trade With Purpose.
+                                <span class="block text-accent-400">Analyze With Precision.</span>
+                            </h1>
+                            <p
+                                class="fx-rise mt-6 max-w-xl text-base md:text-lg leading-relaxed text-background-200/90">
+                                Forex market analysis, trading education, practical resources and personalized
+                                mentorship – built around simplicity, discipline, and knowing when a trade idea becomes
+                                invalid.
+                            </p>
+                            <div class="fx-rise mt-8 flex flex-col sm:flex-row gap-3">
+                                <a href="#services"
+                                    class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md bg-accent-500 px-6 py-3.5 font-heading text-sm md:text-base font-medium text-accent-950 transition-colors duration-200 hover:bg-accent-400 cursor-pointer">
+                                    Explore services
+                                    <i class="ri-arrow-right-line"></i>
+                                </a>
+                            </div>
+                            <dl
+                                class="fx-rise mt-10 md:mt-14 grid grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-6 max-w-2xl">
+                                <div>
+                                    <dt class="font-mono-label text-[10px] uppercase tracking-[0.18em] text-accent-400">
+                                        Focus</dt>
+                                    <dd class="mt-1.5 font-heading text-sm md:text-base text-background-50">Forex
+                                        Markets</dd>
+                                </div>
+                                <div>
+                                    <dt class="font-mono-label text-[10px] uppercase tracking-[0.18em] text-accent-400">
+                                        Discipline</dt>
+                                    <dd class="mt-1.5 font-heading text-sm md:text-base text-background-50">Technical
+                                        Analysis</dd>
+                                </div>
+                                <div>
+                                    <dt class="font-mono-label text-[10px] uppercase tracking-[0.18em] text-accent-400">
+                                        Method</dt>
+                                    <dd class="mt-1.5 font-heading text-sm md:text-base text-background-50">
+                                        Invalidation-Focused</dd>
+                                </div>
+                                <div>
+                                    <dt class="font-mono-label text-[10px] uppercase tracking-[0.18em] text-accent-400">
+                                        Offers</dt>
+                                    <dd class="mt-1.5 font-heading text-sm md:text-base text-background-50">Education &
+                                        Mentorship</dd>
+                                </div>
+                            </dl>
+                        </div>
+                    </div>
+                </section>
+                <section class="w-full bg-foreground-950 border-y border-foreground-800/60 overflow-hidden">
+                    <div class="flex w-max fx-marquee py-3.5">
+                        <span
+                            class="flex items-center gap-6 px-6 font-mono-label text-[11px] uppercase tracking-[0.22em] text-background-200/70 whitespace-nowrap">
+                            Educational content only
+                            <span class="w-1 h-1 rounded-full bg-accent-500"></span>
+                        </span>
+                        <span
+                            class="flex items-center gap-6 px-6 font-mono-label text-[11px] uppercase tracking-[0.22em] text-background-200/70 whitespace-nowrap">
+                            No guaranteed profits
+                            <span class="w-1 h-1 rounded-full bg-accent-500"></span>
+                        </span>
+                        <span
+                            class="flex items-center gap-6 px-6 font-mono-label text-[11px] uppercase tracking-[0.22em] text-background-200/70 whitespace-nowrap">
+                            Structured decision-making
+                            <span class="w-1 h-1 rounded-full bg-accent-500"></span>
+                        </span>
+                        <span
+                            class="flex items-center gap-6 px-6 font-mono-label text-[11px] uppercase tracking-[0.22em] text-background-200/70 whitespace-nowrap">
+                            Risk-aware trading
+                            <span class="w-1 h-1 rounded-full bg-accent-500"></span>
+                        </span>
+                        <span
+                            class="flex items-center gap-6 px-6 font-mono-label text-[11px] uppercase tracking-[0.22em] text-background-200/70 whitespace-nowrap">
+                            Market analysis
+                            <span class="w-1 h-1 rounded-full bg-accent-500"></span>
+                        </span>
+                        <span
+                            class="flex items-center gap-6 px-6 font-mono-label text-[11px] uppercase tracking-[0.22em] text-background-200/70 whitespace-nowrap">
+                            Continuous learning
+                            <span class="w-1 h-1 rounded-full bg-accent-500"></span>
+                        </span>
+                        <span
+                            class="flex items-center gap-6 px-6 font-mono-label text-[11px] uppercase tracking-[0.22em] text-background-200/70 whitespace-nowrap">
+                            Educational content only
+                            <span class="w-1 h-1 rounded-full bg-accent-500"></span>
+                        </span>
+                        <span
+                            class="flex items-center gap-6 px-6 font-mono-label text-[11px] uppercase tracking-[0.22em] text-background-200/70 whitespace-nowrap">
+                            No guaranteed profits
+                            <span class="w-1 h-1 rounded-full bg-accent-500"></span>
+                        </span>
+                        <span
+                            class="flex items-center gap-6 px-6 font-mono-label text-[11px] uppercase tracking-[0.22em] text-background-200/70 whitespace-nowrap">
+                            Structured decision-making
+                            <span class="w-1 h-1 rounded-full bg-accent-500"></span>
+                        </span>
+                        <span
+                            class="flex items-center gap-6 px-6 font-mono-label text-[11px] uppercase tracking-[0.22em] text-background-200/70 whitespace-nowrap">
+                            Risk-aware trading
+                            <span class="w-1 h-1 rounded-full bg-accent-500"></span>
+                        </span>
+                        <span
+                            class="flex items-center gap-6 px-6 font-mono-label text-[11px] uppercase tracking-[0.22em] text-background-200/70 whitespace-nowrap">
+                            Market analysis
+                            <span class="w-1 h-1 rounded-full bg-accent-500"></span>
+                        </span>
+                        <span
+                            class="flex items-center gap-6 px-6 font-mono-label text-[11px] uppercase tracking-[0.22em] text-background-200/70 whitespace-nowrap">
+                            Continuous learning
+                            <span class="w-1 h-1 rounded-full bg-accent-500"></span>
+                        </span>
+                    </div>
+                </section>
+                <section id="about" class="w-full bg-background-50 py-16 md:py-24">
+                    <div class="w-full px-4 md:px-10">
+                        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
+                            <div class="lg:col-span-5">
+                                <div class="relative w-full aspect-[4/5] rounded-lg overflow-hidden bg-background-200">
+                                    <img alt="Iman FX disciplined Forex trading workspace and analysis setup"
+                                        title="Iman FX Forex trader and technical analyst"
+                                        class="w-full h-full object-cover"
+                                        src="assets/27beac308bdc466220a02a352a7361d0.jpg">
+                                    <div
+                                        class="absolute left-4 bottom-4 right-4 rounded-md bg-background-50/95 backdrop-blur-sm p-4">
+                                        <p
+                                            class="font-mono-label text-[10px] uppercase tracking-[0.2em] text-primary-700">
+                                            Based on process, not promises</p>
+                                        <p class="mt-1.5 font-heading text-sm font-medium text-foreground-900">Forex
+                                            Trader | Technical Analyst | Forex Mentor</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="lg:col-span-7">
+                                <div class="max-w-2xl">
+                                    <div class="flex items-center gap-3 ">
+                                        <span class="h-px w-8 bg-accent-500/70"></span>
+                                        <span
+                                            class="font-mono-label text-[10px] md:text-[11px] uppercase tracking-[0.24em] text-accent-700">About
+                                            Iman FX</span>
+                                    </div>
+                                    <h2
+                                        class="mt-4 font-heading text-2xl md:text-3xl lg:text-4xl font-semibold leading-[1.15] tracking-tightest text-foreground-950">
+                                        A structured, disciplined approach to the
+                                        <span class="text-primary-600">financial markets.</span>
+                                    </h2>
+                                    <p class="mt-4 text-sm md:text-base leading-relaxed text-foreground-600">
+                                        I am a Forex trader and technical analyst focused on developing a structured and
+                                        disciplined approach to the financial markets.
+                                    </p>
+                                </div>
+                                <p class="mt-5 max-w-2xl text-sm md:text-base leading-relaxed text-foreground-600">
+                                    Through ImanFx TradingHub, I share trading knowledge, market analysis, educational
+                                    resources, and mentorship designed to help traders improve their understanding and
+                                    decision-making.
+                                </p>
+                                <div class="mt-6 rounded-lg border-l-2 border-primary-500 bg-background-100 px-5 py-4">
+                                    <p class="font-heading text-sm md:text-base leading-relaxed text-foreground-800">
+                                        My approach is focused on simplicity, discipline, analysis, and clearly
+                                        understanding when a trade idea becomes invalid.
+                                    </p>
+                                </div>
+                                <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4">
+                                    <div
+                                        class="group rounded-lg border border-background-200 bg-background-100 p-5 transition-colors duration-200 hover:border-primary-300 hover:bg-background-50">
+                                        <span
+                                            class="w-10 h-10 flex items-center justify-center rounded-md bg-secondary-100 text-secondary-800 transition-colors duration-200 group-hover:bg-primary-100 group-hover:text-primary-700">
+                                            <i class="ri-shield-check-line text-lg"></i>
+                                        </span>
+                                        <h3
+                                            class="mt-4 font-heading text-sm md:text-base font-semibold text-foreground-950">
+                                            Discipline</h3>
+                                        <p class="mt-1.5 text-xs md:text-sm leading-relaxed text-foreground-600">A
+                                            structured process that keeps decisions consistent instead of reactive.</p>
+                                    </div>
+                                    <div
+                                        class="group rounded-lg border border-background-200 bg-background-100 p-5 transition-colors duration-200 hover:border-primary-300 hover:bg-background-50">
+                                        <span
+                                            class="w-10 h-10 flex items-center justify-center rounded-md bg-secondary-100 text-secondary-800 transition-colors duration-200 group-hover:bg-primary-100 group-hover:text-primary-700">
+                                            <i class="ri-focus-3-line text-lg"></i>
+                                        </span>
+                                        <h3
+                                            class="mt-4 font-heading text-sm md:text-base font-semibold text-foreground-950">
+                                            Simplicity</h3>
+                                        <p class="mt-1.5 text-xs md:text-sm leading-relaxed text-foreground-600">Clear,
+                                            uncluttered thinking about what actually matters on a chart.</p>
+                                    </div>
+                                    <div
+                                        class="group rounded-lg border border-background-200 bg-background-100 p-5 transition-colors duration-200 hover:border-primary-300 hover:bg-background-50">
+                                        <span
+                                            class="w-10 h-10 flex items-center justify-center rounded-md bg-secondary-100 text-secondary-800 transition-colors duration-200 group-hover:bg-primary-100 group-hover:text-primary-700">
+                                            <i class="ri-line-chart-line text-lg"></i>
+                                        </span>
+                                        <h3
+                                            class="mt-4 font-heading text-sm md:text-base font-semibold text-foreground-950">
+                                            Market Analysis</h3>
+                                        <p class="mt-1.5 text-xs md:text-sm leading-relaxed text-foreground-600">Reading
+                                            market context and building a reasoned trading idea.</p>
+                                    </div>
+                                    <div
+                                        class="group rounded-lg border border-background-200 bg-background-100 p-5 transition-colors duration-200 hover:border-primary-300 hover:bg-background-50">
+                                        <span
+                                            class="w-10 h-10 flex items-center justify-center rounded-md bg-secondary-100 text-secondary-800 transition-colors duration-200 group-hover:bg-primary-100 group-hover:text-primary-700">
+                                            <i class="ri-book-open-line text-lg"></i>
+                                        </span>
+                                        <h3
+                                            class="mt-4 font-heading text-sm md:text-base font-semibold text-foreground-950">
+                                            Continuous Learning</h3>
+                                        <p class="mt-1.5 text-xs md:text-sm leading-relaxed text-foreground-600">Every
+                                            decision and every review is used to sharpen the next one.</p>
+                                    </div>
+                                    <div
+                                        class="group rounded-lg border border-background-200 bg-background-100 p-5 transition-colors duration-200 hover:border-primary-300 hover:bg-background-50">
+                                        <span
+                                            class="w-10 h-10 flex items-center justify-center rounded-md bg-secondary-100 text-secondary-800 transition-colors duration-200 group-hover:bg-primary-100 group-hover:text-primary-700">
+                                            <i class="ri-node-tree text-lg"></i>
+                                        </span>
+                                        <h3
+                                            class="mt-4 font-heading text-sm md:text-base font-semibold text-foreground-950">
+                                            Structured Decisions</h3>
+                                        <p class="mt-1.5 text-xs md:text-sm leading-relaxed text-foreground-600">Knowing
+                                            the reason behind a trade before any action is taken.</p>
+                                    </div>
+                                    <div
+                                        class="group rounded-lg border border-background-200 bg-background-100 p-5 transition-colors duration-200 hover:border-primary-300 hover:bg-background-50">
+                                        <span
+                                            class="w-10 h-10 flex items-center justify-center rounded-md bg-secondary-100 text-secondary-800 transition-colors duration-200 group-hover:bg-primary-100 group-hover:text-primary-700">
+                                            <i class="ri-hand-heart-line text-lg"></i>
+                                        </span>
+                                        <h3
+                                            class="mt-4 font-heading text-sm md:text-base font-semibold text-foreground-950">
+                                            Responsible Trading</h3>
+                                        <p class="mt-1.5 text-xs md:text-sm leading-relaxed text-foreground-600">
+                                            Respecting risk and treating the market with patience and honesty.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="approach" class="w-full bg-foreground-950 py-16 md:py-24">
+                    <div class="w-full px-4 md:px-10">
+                        <div class="max-w-2xl">
+                            <div class="flex items-center gap-3 ">
+                                <span class="h-px w-8 bg-accent-400/60"></span>
+                                <span
+                                    class="font-mono-label text-[10px] md:text-[11px] uppercase tracking-[0.24em] text-accent-400">Trading
+                                    Approach</span>
+                            </div>
+                            <h2
+                                class="mt-4 font-heading text-2xl md:text-3xl lg:text-4xl font-semibold leading-[1.15] tracking-tightest text-background-50">
+                                An invalidation-focused methodology, followed
+                                <span class="text-accent-400">step by step.</span>
+                            </h2>
+                            <p class="mt-4 text-sm md:text-base leading-relaxed text-background-200/85">
+                                My approach is based on identifying an opportunity, understanding the reason behind the
+                                trade, defining when the idea becomes invalid, and making a disciplined decision based
+                                on that information.
+                            </p>
+                        </div>
+                        <div class="mt-12 md:mt-16 relative">
+                            <div class="hidden lg:block absolute top-[26px] left-0 right-0 h-px bg-foreground-800">
+                            </div>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 lg:gap-5">
+                                <div class="relative">
+                                    <div class="flex items-center gap-4 lg:block">
+                                        <span
+                                            class="relative z-10 w-[52px] h-[52px] flex items-center justify-center rounded-md font-mono-label text-sm font-semibold shrink-0 bg-accent-500 text-accent-950">01</span>
+                                        <h3
+                                            class="font-heading text-base md:text-lg font-semibold text-background-50 lg:hidden">
+                                            Observe</h3>
+                                    </div>
+                                    <h3
+                                        class="hidden lg:block mt-5 font-heading text-base md:text-lg font-semibold text-background-50">
+                                        Observe</h3>
+                                    <p class="mt-2 text-xs md:text-sm leading-relaxed text-background-200/70 lg:pr-2">
+                                        Study the market and identify potential opportunities.</p>
+                                </div>
+                                <div class="relative">
+                                    <div class="flex items-center gap-4 lg:block">
+                                        <span
+                                            class="relative z-10 w-[52px] h-[52px] flex items-center justify-center rounded-md font-mono-label text-sm font-semibold shrink-0 bg-foreground-900 text-accent-400 border border-foreground-800">02</span>
+                                        <h3
+                                            class="font-heading text-base md:text-lg font-semibold text-background-50 lg:hidden">
+                                            Analyze</h3>
+                                    </div>
+                                    <h3
+                                        class="hidden lg:block mt-5 font-heading text-base md:text-lg font-semibold text-background-50">
+                                        Analyze</h3>
+                                    <p class="mt-2 text-xs md:text-sm leading-relaxed text-background-200/70 lg:pr-2">
+                                        Evaluate the market and develop a trading idea.</p>
+                                </div>
+                                <div class="relative">
+                                    <div class="flex items-center gap-4 lg:block">
+                                        <span
+                                            class="relative z-10 w-[52px] h-[52px] flex items-center justify-center rounded-md font-mono-label text-sm font-semibold shrink-0 bg-foreground-900 text-accent-400 border border-foreground-800">03</span>
+                                        <h3
+                                            class="font-heading text-base md:text-lg font-semibold text-background-50 lg:hidden">
+                                            Define Invalidation</h3>
+                                    </div>
+                                    <h3
+                                        class="hidden lg:block mt-5 font-heading text-base md:text-lg font-semibold text-background-50">
+                                        Define Invalidation</h3>
+                                    <p class="mt-2 text-xs md:text-sm leading-relaxed text-background-200/70 lg:pr-2">
+                                        Determine the point at which the trading idea is no longer valid.</p>
+                                </div>
+                                <div class="relative">
+                                    <div class="flex items-center gap-4 lg:block">
+                                        <span
+                                            class="relative z-10 w-[52px] h-[52px] flex items-center justify-center rounded-md font-mono-label text-sm font-semibold shrink-0 bg-foreground-900 text-accent-400 border border-foreground-800">04</span>
+                                        <h3
+                                            class="font-heading text-base md:text-lg font-semibold text-background-50 lg:hidden">
+                                            Execute</h3>
+                                    </div>
+                                    <h3
+                                        class="hidden lg:block mt-5 font-heading text-base md:text-lg font-semibold text-background-50">
+                                        Execute</h3>
+                                    <p class="mt-2 text-xs md:text-sm leading-relaxed text-background-200/70 lg:pr-2">
+                                        Take action only when the conditions of the trading idea are met.</p>
+                                </div>
+                                <div class="relative">
+                                    <div class="flex items-center gap-4 lg:block">
+                                        <span
+                                            class="relative z-10 w-[52px] h-[52px] flex items-center justify-center rounded-md font-mono-label text-sm font-semibold shrink-0 bg-foreground-900 text-accent-400 border border-foreground-800">05</span>
+                                        <h3
+                                            class="font-heading text-base md:text-lg font-semibold text-background-50 lg:hidden">
+                                            Review</h3>
+                                    </div>
+                                    <h3
+                                        class="hidden lg:block mt-5 font-heading text-base md:text-lg font-semibold text-background-50">
+                                        Review</h3>
+                                    <p class="mt-2 text-xs md:text-sm leading-relaxed text-background-200/70 lg:pr-2">
+                                        Evaluate the decision and use the experience to improve future trading.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="mt-12 md:mt-16 rounded-lg border border-foreground-800 bg-foreground-900/60 p-5 md:p-7 flex flex-col md:flex-row md:items-center gap-5 md:gap-8">
+                            <span
+                                class="w-12 h-12 flex items-center justify-center rounded-md bg-primary-500/15 text-primary-300 shrink-0">
+                                <i class="ri-lock-2-line text-2xl"></i>
+                            </span>
+                            <p class="text-xs md:text-sm leading-relaxed text-background-200/80">
+                                The detailed mechanics of the strategy are kept private and are not published publicly.
+                                What is shared here is the thinking process – structure, patience, discipline, and a
+                                clear understanding of when an idea is no longer valid.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+                <section id="services" class="w-full bg-background-100 py-16 md:py-24">
+                    <div class="w-full px-4 md:px-10">
+                        <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
+                            <div class="max-w-2xl">
+                                <div class="flex items-center gap-3 ">
+                                    <span class="h-px w-8 bg-accent-500/70"></span>
+                                    <span
+                                        class="font-mono-label text-[10px] md:text-[11px] uppercase tracking-[0.24em] text-accent-700">Services</span>
+                                </div>
+                                <h2
+                                    class="mt-4 font-heading text-2xl md:text-3xl lg:text-4xl font-semibold leading-[1.15] tracking-tightest text-foreground-950">
+                                    Mentorship and learning resources
+                                    <span class="text-primary-600">built around process.</span>
+                                </h2>
+                                <p class="mt-4 text-sm md:text-base leading-relaxed text-foreground-600">
+                                    These services help traders improve their understanding, structure, and
+                                    decision-making. All material is educational and does not guarantee profits.
+                                </p>
+                            </div>
+                            <a href="#contact"
+                                class="hidden lg:inline-flex items-center gap-2 whitespace-nowrap rounded-md border border-foreground-300 px-5 py-3 font-heading text-sm font-medium text-foreground-800 transition-colors duration-200 hover:border-primary-400 hover:text-primary-700 cursor-pointer">
+                                <i class="ri-send-plane-line"></i>
+                                Ask about a service
+                            </a>
+                        </div>
+                        <div class="mt-10 md:mt-14 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-5">
+                            <article
+                                class="relative flex flex-col rounded-lg p-6 transition-colors duration-200 bg-background-50 border border-background-200 hover:border-primary-200">
+                                <span
+                                    class="font-mono-label text-[10px] uppercase tracking-[0.2em] text-secondary-600">Educational
+                                    resource</span>
+                                <h3 class="mt-3 font-heading text-lg font-semibold text-foreground-950">Trading PDF
+                                    Notes</h3>
+                                <div class="mt-4 flex items-end gap-1.5">
+                                    <span
+                                        class="font-heading text-3xl font-semibold tracking-tight text-primary-700">$30</span>
+                                    <span
+                                        class="pb-1 font-mono-label text-[10px] uppercase tracking-[0.14em] text-foreground-500">USD</span>
+                                </div>
+                                <p class="mt-4 text-xs md:text-sm leading-relaxed text-foreground-600">
+                                    Educational trading notes designed to help traders understand and improve their
+                                    trading process.
+                                </p>
+                                <ul class="mt-5 space-y-2.5 flex-1">
+                                    <li class="flex items-start gap-2.5">
+                                        <i class="ri-check-line mt-0.5 text-base text-primary-600"></i>
+                                        <span class="text-xs md:text-sm text-foreground-700">Structured written
+                                            notes</span>
+                                    </li>
+                                    <li class="flex items-start gap-2.5">
+                                        <i class="ri-check-line mt-0.5 text-base text-primary-600"></i>
+                                        <span class="text-xs md:text-sm text-foreground-700">Process-oriented
+                                            learning</span>
+                                    </li>
+                                    <li class="flex items-start gap-2.5">
+                                        <i class="ri-check-line mt-0.5 text-base text-primary-600"></i>
+                                        <span class="text-xs md:text-sm text-foreground-700">Practical reference
+                                            material</span>
+                                    </li>
+                                </ul>
+                                <a href="#contact"
+                                    class="mt-6 inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md px-5 py-3 font-heading text-sm font-medium transition-colors duration-200 cursor-pointer bg-foreground-950 text-background-50 hover:bg-foreground-800">
+                                    Enquire now
+                                    <i class="ri-arrow-right-line"></i>
+                                </a>
+                            </article>
+                            <article
+                                class="relative flex flex-col rounded-lg p-6 transition-colors duration-200 bg-background-50 border border-background-200 hover:border-primary-200">
+                                <span
+                                    class="font-mono-label text-[10px] uppercase tracking-[0.2em] text-secondary-600">Community
+                                    access</span>
+                                <h3 class="mt-3 font-heading text-lg font-semibold text-foreground-950">Signals
+                                    Community</h3>
+                                <div class="mt-4 flex items-end gap-1.5">
+                                    <span
+                                        class="font-heading text-3xl font-semibold tracking-tight text-primary-700">$15</span>
+                                    <span
+                                        class="pb-1 font-mono-label text-[10px] uppercase tracking-[0.14em] text-foreground-500">USD</span>
+                                </div>
+                                <p class="mt-4 text-xs md:text-sm leading-relaxed text-foreground-600">Access to market
+                                    analysis, trade ideas, and trading discussions.</p>
+                                <ul class="mt-5 space-y-2.5 flex-1">
+                                    <li class="flex items-start gap-2.5">
+                                        <i class="ri-check-line mt-0.5 text-base text-primary-600"></i>
+                                        <span class="text-xs md:text-sm text-foreground-700">Market analysis
+                                            sharing</span>
+                                    </li>
+                                    <li class="flex items-start gap-2.5">
+                                        <i class="ri-check-line mt-0.5 text-base text-primary-600"></i>
+                                        <span class="text-xs md:text-sm text-foreground-700">Trade idea
+                                            discussion</span>
+                                    </li>
+                                    <li class="flex items-start gap-2.5">
+                                        <i class="ri-check-line mt-0.5 text-base text-primary-600"></i>
+                                        <span class="text-xs md:text-sm text-foreground-700">Ongoing trading
+                                            conversation</span>
+                                    </li>
+                                </ul>
+                                <p
+                                    class="mt-4 font-mono-label text-[10px] uppercase tracking-[0.12em] text-foreground-500">
+                                    No guaranteed profits.</p>
+                                <a href="#contact"
+                                    class="mt-6 inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md px-5 py-3 font-heading text-sm font-medium transition-colors duration-200 cursor-pointer bg-foreground-950 text-background-50 hover:bg-foreground-800">
+                                    Enquire now
+                                    <i class="ri-arrow-right-line"></i>
+                                </a>
+                            </article>
+                            <article
+                                class="relative flex flex-col rounded-lg p-6 transition-colors duration-200 bg-background-50 border border-background-200 hover:border-primary-200">
+                                <span
+                                    class="font-mono-label text-[10px] uppercase tracking-[0.2em] text-secondary-600">Collaborative
+                                    sessions</span>
+                                <h3 class="mt-3 font-heading text-lg font-semibold text-foreground-950">Pool Trading
+                                </h3>
+                                <div class="mt-4 flex items-end gap-1.5">
+                                    <span
+                                        class="font-heading text-3xl font-semibold tracking-tight text-primary-700">$20</span>
+                                    <span
+                                        class="pb-1 font-mono-label text-[10px] uppercase tracking-[0.14em] text-foreground-500">USD</span>
+                                </div>
+                                <p class="mt-4 text-xs md:text-sm leading-relaxed text-foreground-600">
+                                    Collaborative trading sessions focused on market analysis, learning, and sharing
+                                    trading ideas.
+                                </p>
+                                <ul class="mt-5 space-y-2.5 flex-1">
+                                    <li class="flex items-start gap-2.5">
+                                        <i class="ri-check-line mt-0.5 text-base text-primary-600"></i>
+                                        <span class="text-xs md:text-sm text-foreground-700">Shared analysis
+                                            sessions</span>
+                                    </li>
+                                    <li class="flex items-start gap-2.5">
+                                        <i class="ri-check-line mt-0.5 text-base text-primary-600"></i>
+                                        <span class="text-xs md:text-sm text-foreground-700">Learn alongside other
+                                            traders</span>
+                                    </li>
+                                    <li class="flex items-start gap-2.5">
+                                        <i class="ri-check-line mt-0.5 text-base text-primary-600"></i>
+                                        <span class="text-xs md:text-sm text-foreground-700">Exchange of trading
+                                            ideas</span>
+                                    </li>
+                                </ul>
+                                <p
+                                    class="mt-4 font-mono-label text-[10px] uppercase tracking-[0.12em] text-foreground-500">
+                                    No guaranteed returns.</p>
+                                <a href="#contact"
+                                    class="mt-6 inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md px-5 py-3 font-heading text-sm font-medium transition-colors duration-200 cursor-pointer bg-foreground-950 text-background-50 hover:bg-foreground-800">
+                                    Enquire now
+                                    <i class="ri-arrow-right-line"></i>
+                                </a>
+                            </article>
+                            <article
+                                class="relative flex flex-col rounded-lg p-6 transition-colors duration-200 bg-primary-600 text-background-100 border border-primary-500">
+                                <span
+                                    class="absolute top-6 right-6 rounded-full bg-background-50 px-3 py-1 font-mono-label text-[10px] uppercase tracking-[0.16em] text-primary-700">Premium</span>
+                                <span
+                                    class="font-mono-label text-[10px] uppercase tracking-[0.2em] text-primary-100">Main
+                                    premium service</span>
+                                <h3 class="mt-3 font-heading text-lg font-semibold text-background-50">1-on-1 Mentorship
+                                </h3>
+                                <div class="mt-4 flex items-end gap-1.5">
+                                    <span
+                                        class="font-heading text-3xl font-semibold tracking-tight text-background-50">$50</span>
+                                    <span
+                                        class="pb-1 font-mono-label text-[10px] uppercase tracking-[0.14em] text-primary-100/80">USD</span>
+                                </div>
+                                <p class="mt-4 text-xs md:text-sm leading-relaxed text-background-50/90">
+                                    Personalized trading guidance covering market analysis, strategy development,
+                                    trading decision-making, and trading discipline.
+                                </p>
+                                <ul class="mt-5 space-y-2.5 flex-1">
+                                    <li class="flex items-start gap-2.5">
+                                        <i class="ri-check-line mt-0.5 text-base text-background-50"></i>
+                                        <span class="text-xs md:text-sm text-background-100/85">Market analysis
+                                            guidance</span>
+                                    </li>
+                                    <li class="flex items-start gap-2.5">
+                                        <i class="ri-check-line mt-0.5 text-base text-background-50"></i>
+                                        <span class="text-xs md:text-sm text-background-100/85">Strategy
+                                            development</span>
+                                    </li>
+                                    <li class="flex items-start gap-2.5">
+                                        <i class="ri-check-line mt-0.5 text-base text-background-50"></i>
+                                        <span class="text-xs md:text-sm text-background-100/85">Trading
+                                            decision-making</span>
+                                    </li>
+                                    <li class="flex items-start gap-2.5">
+                                        <i class="ri-check-line mt-0.5 text-base text-background-50"></i>
+                                        <span class="text-xs md:text-sm text-background-100/85">Trading discipline &amp;
+                                            structure</span>
+                                    </li>
+                                </ul>
+                                <a href="#contact"
+                                    class="mt-6 inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md px-5 py-3 font-heading text-sm font-medium transition-colors duration-200 cursor-pointer bg-background-50 text-primary-700 hover:bg-background-100">
+                                    Enquire now
+                                    <i class="ri-arrow-right-line"></i>
+                                </a>
+                            </article>
+                        </div>
+                        <p
+                            class="mt-8 flex items-start gap-2.5 max-w-3xl font-mono-label text-[11px] leading-relaxed text-foreground-500">
+                            <i class="ri-information-line mt-0.5 text-sm"></i>
+                            Educational materials, market analysis and trade ideas are provided for informational and
+                            educational purposes only and do not guarantee profits.
+                        </p>
+                    </div>
+                </section>
+                <section id="connect" class="w-full bg-secondary-100/70 py-16 md:py-24">
+                    <div class="w-full px-4 md:px-10">
+                        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14">
+                            <div class="lg:col-span-4">
+                                <div class="max-w-2xl">
+                                    <div class="flex items-center gap-3 ">
+                                        <span class="h-px w-8 bg-accent-500/70"></span>
+                                        <span
+                                            class="font-mono-label text-[10px] md:text-[11px] uppercase tracking-[0.24em] text-accent-700">Connect</span>
+                                    </div>
+                                    <h2
+                                        class="mt-4 font-heading text-2xl md:text-3xl lg:text-4xl font-semibold leading-[1.15] tracking-tightest text-foreground-950">
+                                        Follow the analysis and
+                                        <span class="text-primary-600">join the conversation.</span>
+                                    </h2>
+                                    <p class="mt-4 text-sm md:text-base leading-relaxed text-foreground-600">
+                                        Market analysis, trading discussions and educational content are shared across
+                                        our channels. Reach out on WhatsApp for the fastest response.
+                                    </p>
+                                </div>
+                                <a href="https://wa.me/254704372636" rel="nofollow"
+                                    class="mt-7 inline-flex items-center gap-2.5 whitespace-nowrap rounded-md bg-primary-500 px-6 py-3.5 font-heading text-sm font-medium text-background-50 transition-colors duration-200 hover:bg-primary-600 cursor-pointer">
+                                    <i class="ri-whatsapp-line text-lg"></i>
+                                    Message on WhatsApp
+                                </a>
+                                <p class="mt-3 font-mono-label text-[11px] text-foreground-500">0704372636</p>
+                            </div>
+                            <div class="lg:col-span-8">
+                                <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4">
+                                    <a href="https://wa.me/254704372636" rel="nofollow"
+                                        class="group rounded-lg border bg-background-50 p-5 transition-colors duration-200 cursor-pointer border-background-200 hover:border-primary-300">
+                                        <div class="flex items-center justify-between">
+                                            <span
+                                                class="w-11 h-11 flex items-center justify-center rounded-md text-xl transition-colors duration-200 bg-primary-100 text-primary-700">
+                                                <i class="ri-whatsapp-line"></i>
+                                            </span>
+                                            <i
+                                                class="ri-arrow-right-up-line text-foreground-400 transition-colors duration-200 group-hover:text-primary-600"></i>
+                                        </div>
+                                        <h3
+                                            class="mt-4 font-heading text-sm md:text-base font-semibold text-foreground-950">
+                                            WhatsApp</h3>
+                                        <p class="mt-1 font-mono-label text-[11px] text-foreground-600">0704372636</p>
+                                    </a>
+                                    <a href="https://t.me/+254704372636" rel="nofollow" target="_blank"
+                                        class="group rounded-lg border bg-background-50 p-5 transition-colors duration-200 cursor-pointer border-background-200 hover:border-primary-300">
+                                        <div class="flex items-center justify-between">
+                                            <span
+                                                class="w-11 h-11 flex items-center justify-center rounded-md text-xl transition-colors duration-200 bg-primary-100 text-primary-700 group-hover:bg-primary-200">
+                                                <i class="ri-telegram-line"></i>
+                                            </span>
+                                            <i
+                                                class="ri-arrow-right-up-line text-foreground-400 transition-colors duration-200 group-hover:text-primary-600"></i>
+                                        </div>
+                                        <h3
+                                            class="mt-4 font-heading text-sm md:text-base font-semibold text-foreground-950">
+                                            Telegram</h3>
+                                        <p class="mt-1 font-mono-label text-[11px] text-foreground-600">+254704372636
+                                        </p>
+                                    </a>
+                                    <a href="https://www.instagram.com/imanfx001" rel="nofollow" target="_blank"
+                                        class="group rounded-lg border bg-background-50 p-5 transition-colors duration-200 cursor-pointer border-background-200 hover:border-primary-300">
+                                        <div class="flex items-center justify-between">
+                                            <span
+                                                class="w-11 h-11 flex items-center justify-center rounded-md text-xl transition-colors duration-200 bg-secondary-100 text-secondary-700 group-hover:bg-primary-100 group-hover:text-primary-700">
+                                                <i class="ri-instagram-line"></i>
+                                            </span>
+                                            <i
+                                                class="ri-arrow-right-up-line text-foreground-400 transition-colors duration-200 group-hover:text-primary-600"></i>
+                                        </div>
+                                        <h3
+                                            class="mt-4 font-heading text-sm md:text-base font-semibold text-foreground-950">
+                                            Instagram</h3>
+                                        <p class="mt-1 font-mono-label text-[11px] text-foreground-600">@imanfx001</p>
+                                    </a>
+                                    <a href="https://www.tiktok.com/@officialsparry254" rel="nofollow" target="_blank"
+                                        class="group rounded-lg border bg-background-50 p-5 transition-colors duration-200 cursor-pointer border-background-200 hover:border-primary-300">
+                                        <div class="flex items-center justify-between">
+                                            <span
+                                                class="w-11 h-11 flex items-center justify-center rounded-md text-xl transition-colors duration-200 bg-secondary-100 text-secondary-700 group-hover:bg-primary-100 group-hover:text-primary-700">
+                                                <i class="ri-tiktok-line"></i>
+                                            </span>
+                                            <i
+                                                class="ri-arrow-right-up-line text-foreground-400 transition-colors duration-200 group-hover:text-primary-600"></i>
+                                        </div>
+                                        <h3
+                                            class="mt-4 font-heading text-sm md:text-base font-semibold text-foreground-950">
+                                            TikTok</h3>
+                                        <p class="mt-1 font-mono-label text-[11px] text-foreground-600">
+                                            @officialsparry254</p>
+                                    </a>
+                                    <a href="https://youtube.com/@sparry254" rel="nofollow" target="_blank"
+                                        class="group rounded-lg border bg-background-50 p-5 transition-colors duration-200 cursor-pointer border-background-200 hover:border-primary-300">
+                                        <div class="flex items-center justify-between">
+                                            <span
+                                                class="w-11 h-11 flex items-center justify-center rounded-md text-xl transition-colors duration-200 bg-secondary-100 text-secondary-700 group-hover:bg-primary-100 group-hover:text-primary-700">
+                                                <i class="ri-youtube-line"></i>
+                                            </span>
+                                            <i
+                                                class="ri-arrow-right-up-line text-foreground-400 transition-colors duration-200 group-hover:text-primary-600"></i>
+                                        </div>
+                                        <h3
+                                            class="mt-4 font-heading text-sm md:text-base font-semibold text-foreground-950">
+                                            YouTube</h3>
+                                        <p class="mt-1 font-mono-label text-[11px] text-foreground-600">@sparry254</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="contact" class="w-full bg-background-50 py-16 md:py-24">
+                    <div class="w-full px-4 md:px-10">
+                        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14">
+                            <div class="lg:col-span-5">
+                                <div class="flex items-center gap-3">
+                                    <span class="h-px w-8 bg-accent-500/70"></span>
+                                    <span
+                                        class="font-mono-label text-[10px] md:text-[11px] uppercase tracking-[0.24em] text-accent-700">Contact</span>
+                                </div>
+                                <h2
+                                    class="mt-4 font-heading text-2xl md:text-3xl lg:text-4xl font-semibold leading-[1.15] tracking-tightest text-foreground-950">
+                                    Let's talk about your
+                                    <span class="text-primary-600">trading development.</span>
+                                </h2>
+                                <p class="mt-4 text-sm md:text-base leading-relaxed text-foreground-600">Use the form
+                                    for mentorship and service enquiries, WhatsApp for direct communication, and email
+                                    for professional inquiries.</p>
+                                <div class="mt-8 space-y-3">
+                                    <a href="https://wa.me/254704372636"
+                                        class="flex items-center gap-4 rounded-lg border border-background-200 bg-background-100 px-5 py-4 hover:border-primary-300 transition-colors">
+                                        <span
+                                            class="w-10 h-10 flex items-center justify-center rounded-md bg-primary-100 text-primary-700 shrink-0">
+                                            <i class="ri-whatsapp-line text-lg"></i>
+                                        </span>
+                                        <div>
+                                            <p
+                                                class="font-mono-label text-[10px] uppercase tracking-[0.14em] text-foreground-500">
+                                                Whatsapp — Direct</p>
+                                            <p class="font-heading text-sm font-semibold text-foreground-950">0704372636
+                                            </p>
+                                        </div>
+                                    </a>
+                                    <a href="mailto:imanieric878@gmail.com"
+                                        class="flex items-center gap-4 rounded-lg border border-background-200 bg-background-100 px-5 py-4 hover:border-primary-300 transition-colors">
+                                        <span
+                                            class="w-10 h-10 flex items-center justify-center rounded-md bg-accent-100 text-accent-700 shrink-0">
+                                            <i class="ri-mail-line text-lg"></i>
+                                        </span>
+                                        <div>
+                                            <p
+                                                class="font-mono-label text-[10px] uppercase tracking-[0.14em] text-foreground-500">
+                                                Email — Professional</p>
+                                            <p class="font-heading text-sm font-semibold text-foreground-950">
+                                                imanieric878@gmail.com</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="mt-6 rounded-lg border-l-2 border-accent-500 bg-background-100 px-5 py-4">
+                                    <p class="font-heading text-sm font-semibold text-foreground-950">Trade With
+                                        Purpose. Analyze With Precision.</p>
+                                    <p class="mt-1 font-mono-label text-[11px] text-foreground-500">ImanFx TradingHub
+                                        &mdash; Iman FX</p>
+                                </div>
+                            </div>
+                            <div class="lg:col-span-7">
+                                <!-- Toast notification -->
+                                <div id="form-toast"
+                                    class="hidden mb-5 flex items-start gap-3 rounded-lg border px-5 py-4 text-sm"
+                                    role="alert"></div>
+                                <form id="contact-form" action="https://formspree.io/f/xgowjwab" method="POST"
+                                    class="rounded-xl border border-background-200 bg-background-50 p-6 md:p-8 shadow-sm">
+                                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                                        <div>
+                                            <label for="fullName"
+                                                class="block font-mono-label text-xs uppercase tracking-[0.1em] text-foreground-600">Full
+                                                Name</label>
+                                            <input type="text" id="fullName" name="fullName" required
+                                                class="mt-2 w-full rounded-md border border-background-300 bg-background-100 px-4 py-3 text-sm focus:border-primary-500 focus:outline-none focus:ring-1 focus:ring-primary-500 transition-colors"
+                                                placeholder="Your name">
+                                        </div>
+                                        <div>
+                                            <label for="contactEmail"
+                                                class="block font-mono-label text-xs uppercase tracking-[0.1em] text-foreground-600">Email
+                                                Address</label>
+                                            <input type="email" id="contactEmail" name="email" required
+                                                class="mt-2 w-full rounded-md border border-background-300 bg-background-100 px-4 py-3 text-sm focus:border-primary-500 focus:outline-none focus:ring-1 focus:ring-primary-500 transition-colors"
+                                                placeholder="you@example.com">
+                                        </div>
+                                        <div class="sm:col-span-2">
+                                            <label for="interest"
+                                                class="block font-mono-label text-xs uppercase tracking-[0.1em] text-foreground-600">What
+                                                Are You Interested In?</label>
+                                            <select id="interest" name="interest"
+                                                class="mt-2 w-full rounded-md border border-background-300 bg-background-100 px-4 py-3 text-sm focus:border-primary-500 focus:outline-none focus:ring-1 focus:ring-primary-500 transition-colors">
+                                                <option>1-on-1 Mentorship — $50</option>
+                                                <option>Market Analysis</option>
+                                                <option>Trading Education</option>
+                                                <option>General Enquiry</option>
+                                            </select>
+                                        </div>
+                                        <div class="sm:col-span-2">
+                                            <div class="flex items-center justify-between">
+                                                <label for="contactMessage"
+                                                    class="block font-mono-label text-xs uppercase tracking-[0.1em] text-foreground-600">Message</label>
+                                                <span id="char-count"
+                                                    class="font-mono-label text-[10px] text-foreground-400">Max 500
+                                                    characters</span>
+                                            </div>
+                                            <textarea id="contactMessage" name="message" maxlength="500" rows="5"
+                                                required
+                                                class="mt-2 w-full rounded-md border border-background-300 bg-background-100 px-4 py-3 text-sm focus:border-primary-500 focus:outline-none focus:ring-1 focus:ring-primary-500 transition-colors"
+                                                placeholder="Tell me a little about your trading experience and what you would like help with."></textarea>
+                                        </div>
+                                        <div
+                                            class="sm:col-span-2 flex flex-col sm:flex-row items-start sm:items-center gap-4">
+                                            <button type="submit" id="send-btn"
+                                                class="inline-flex items-center gap-2 rounded-md bg-primary-600 px-7 py-3.5 font-heading text-sm font-semibold text-background-50 transition-colors hover:bg-primary-700 disabled:opacity-60 disabled:cursor-not-allowed">
+                                                <i class="ri-send-plane-fill" id="send-icon"></i>
+                                                <span id="send-label">Send message</span>
+                                            </button>
+                                            <p class="text-xs text-foreground-500 leading-relaxed max-w-xs">By sending a
+                                                message you agree that this content is educational and not financial
+                                                advice.</p>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="w-full bg-accent-100/70 py-14 md:py-20">
+                    <div class="w-full px-4 md:px-10">
+                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+                            <div>
+                                <div class="flex items-center gap-3 mb-5">
+                                    <span
+                                        class="w-10 h-10 flex items-center justify-center rounded-md bg-accent-200 text-accent-700">
+                                        <i class="ri-alert-line text-xl"></i>
+                                    </span>
+                                    <span
+                                        class="font-mono-label text-[10px] uppercase tracking-[0.22em] text-accent-700">Risk
+                                        Disclaimer</span>
+                                </div>
+                                <h2
+                                    class="font-heading text-3xl md:text-4xl font-bold leading-[1.1] text-foreground-950">
+                                    Trade responsibly. Only risk what you can afford to lose.
+                                </h2>
+                            </div>
+                            <div class="rounded-xl border border-accent-200 bg-background-50 p-6 md:p-8 space-y-4">
+                                <p class="text-sm md:text-base leading-relaxed text-foreground-700">Forex and financial
+                                    market trading involves significant risk.</p>
+                                <p class="text-sm md:text-base leading-relaxed text-foreground-700">Educational
+                                    materials, market analysis, and trade ideas are provided for informational and
+                                    educational purposes only and do not guarantee profits.</p>
+                                <p class="text-sm md:text-base leading-relaxed text-foreground-700">Trade responsibly
+                                    and only risk capital you can afford to lose.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            <footer class="w-full bg-foreground-950 text-background-100 py-14">
+                <div class="w-full px-4 md:px-10">
+                    <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
+                        <!-- Brand -->
+                        <div class="md:col-span-1">
+                            <a href="#top" class="inline-flex items-center gap-2.5 mb-4">
+                                <div
+                                    class="flex h-9 w-9 items-center justify-center rounded-md bg-background-50 text-foreground-950 font-heading font-bold text-sm">
+                                    IF</div>
+                                <div>
+                                    <p class="font-heading text-base font-bold text-background-50 leading-none">ImanFx
+                                        TradingHub</p>
+                                    <p
+                                        class="font-mono-label text-[9px] uppercase tracking-[0.2em] text-background-300 mt-0.5">
+                                        Trade with purpose. Analyze with precision.</p>
+                                </div>
+                            </a>
+                            <p class="mt-3 text-sm text-background-300 leading-relaxed">
+                                Iman FX is a Forex trader and technical analyst, and the creator of ImanFx TradingHub.
+                                The brand focuses on Forex market analysis, trading education, practical trading
+                                resources, and personalized
+                                <a href="#services"
+                                    class="text-primary-400 hover:text-primary-300 underline underline-offset-2 transition-colors">mentorship.</a>
+                            </p>
+                        </div>
+                        <!-- Explore -->
+                        <div>
+                            <h4
+                                class="font-mono-label text-[10px] uppercase tracking-[0.22em] text-background-400 mb-4">
+                                Explore</h4>
+                            <ul class="space-y-2.5">
+                                <li><a href="#about"
+                                        class="text-sm text-background-200 hover:text-primary-400 transition-colors">About</a>
+                                </li>
+                                <li><a href="#approach"
+                                        class="text-sm text-background-200 hover:text-primary-400 transition-colors">Approach</a>
+                                </li>
+                                <li><a href="#services"
+                                        class="text-sm text-background-200 hover:text-primary-400 transition-colors">Services</a>
+                                </li>
+                                <li><a href="#connect"
+                                        class="text-sm text-background-200 hover:text-primary-400 transition-colors">Connect</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- Connect -->
+                        <div>
+                            <h4
+                                class="font-mono-label text-[10px] uppercase tracking-[0.22em] text-background-400 mb-4">
+                                Connect</h4>
+                            <ul class="space-y-2.5">
+                                <li>
+                                    <a href="https://wa.me/254704372636"
+                                        class="flex items-center gap-2.5 text-sm text-background-200 hover:text-primary-400 transition-colors">
+                                        <i class="ri-whatsapp-line text-base"></i> WhatsApp
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://t.me/+254704372636"
+                                        class="flex items-center gap-2.5 text-sm text-background-200 hover:text-primary-400 transition-colors">
+                                        <i class="ri-telegram-line text-base"></i> Telegram
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.instagram.com/imanfx001" target="_blank"
+                                        rel="noopener noreferrer"
+                                        class="flex items-center gap-2.5 text-sm text-background-200 hover:text-primary-400 transition-colors">
+                                        <i class="ri-instagram-line text-base"></i> Instagram
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.tiktok.com/@officialsparry254" target="_blank"
+                                        rel="noopener noreferrer"
+                                        class="flex items-center gap-2.5 text-sm text-background-200 hover:text-primary-400 transition-colors">
+                                        <i class="ri-tiktok-line text-base"></i> TikTok
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://youtube.com/@sparry254" target="_blank" rel="noopener noreferrer"
+                                        class="flex items-center gap-2.5 text-sm text-background-200 hover:text-primary-400 transition-colors">
+                                        <i class="ri-youtube-line text-base"></i> YouTube
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.facebook.com/Sparry254" target="_blank"
+                                        rel="noopener noreferrer"
+                                        class="flex items-center gap-2.5 text-sm text-background-200 hover:text-primary-400 transition-colors">
+                                        <i class="ri-facebook-line text-base"></i> Facebook
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- Direct Contact -->
+                        <div>
+                            <h4
+                                class="font-mono-label text-[10px] uppercase tracking-[0.22em] text-background-400 mb-4">
+                                Direct Contact</h4>
+                            <ul class="space-y-3">
+                                <li>
+                                    <a href="mailto:imanieric878@gmail.com"
+                                        class="flex items-center gap-2.5 text-sm text-background-200 hover:text-primary-400 transition-colors">
+                                        <i class="ri-mail-line text-base"></i> imanieric878@gmail.com
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://wa.me/254704372636"
+                                        class="flex items-center gap-2.5 text-sm text-background-200 hover:text-primary-400 transition-colors">
+                                        <i class="ri-whatsapp-line text-base"></i> 0704372636
+                                    </a>
+                                </li>
+                            </ul>
+                            <a href="#contact"
+                                class="mt-6 inline-flex items-center gap-2 rounded-md bg-accent-500 px-5 py-3 font-heading text-sm font-semibold text-accent-950 hover:bg-accent-400 transition-colors">
+                                Send an inquiry
+                                <i class="ri-arrow-right-line"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div
+                        class="mt-12 pt-6 border-t border-foreground-800/60 flex flex-col md:flex-row items-center justify-between gap-3">
+                        <p class="font-mono-label text-[10px] text-background-500">&copy; 2026 ImanFx TradingHub. All
+                            rights reserved.</p>
+                        <p class="font-mono-label text-[10px] text-background-500">Educational content only &mdash; not
+                            financial advice.</p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <script>
+            // Mobile menu toggle
+            const menuBtn = document.querySelector('button[aria-label="Toggle navigation menu"]');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuIcon = menuBtn ? menuBtn.querySelector('i') : null;
+
+            if (menuBtn && mobileMenu && menuIcon) {
+                menuBtn.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                    mobileMenu.classList.toggle('flex');
+                    if (mobileMenu.classList.contains('hidden')) {
+                        menuIcon.classList.replace('ri-close-line', 'ri-menu-line');
+                    } else {
+                        menuIcon.classList.replace('ri-menu-line', 'ri-close-line');
+                    }
+                });
+
+                // Close mobile menu on link click
+                mobileMenu.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.add('hidden');
+                        mobileMenu.classList.remove('flex');
+                        menuIcon.classList.replace('ri-close-line', 'ri-menu-line');
+                    });
+                });
+            }
+
+            // Header scroll effect — turns white on scroll
+            const header = document.querySelector('header');
+            const logoIcon = header ? header.querySelector('span.w-9') : null;
+            const logoText = header ? header.querySelector('.nav-logo-text') : null;
+            const logoSub = header ? header.querySelector('.nav-sub-text') : null;
+
+            function updateHeader() {
+                if (!header) return;
+
+                if (window.scrollY > 20) {
+                    header.style.background = '#ffffff';
+                    header.style.borderBottomColor = '#e5e7eb';
+                    header.style.boxShadow = '0 1px 8px 0 rgba(0,0,0,0.07)';
+                    // Logo icon: invert to dark bg / green text
+                    if (logoIcon) { logoIcon.style.background = '#15803d'; logoIcon.style.color = '#ffffff'; }
+                    // Logo text: dark
+                    if (logoText) { logoText.style.color = '#101010'; }
+                    if (logoSub) { logoSub.style.color = '#555555'; }
+                    // Nav links: dark
+                    header.querySelectorAll('nav a:not(.flex), nav button').forEach(el => {
+                        el.classList.remove('text-background-200', 'text-background-50', 'hover:text-background-50');
+                        el.classList.add('text-foreground-700', 'hover:text-foreground-950');
+                    });
+                    // CTA button
+                    const cta = header.querySelector('a[href="#contact"].bg-primary-500');
+                    if (cta) { cta.style.background = '#16a34a'; }
+                } else {
+                    header.style.background = '';
+                    header.style.borderBottomColor = '';
+                    header.style.boxShadow = '';
+                    if (logoIcon) { logoIcon.style.background = ''; logoIcon.style.color = ''; }
+                    if (logoText) { logoText.style.color = ''; }
+                    if (logoSub) { logoSub.style.color = ''; }
+                    header.querySelectorAll('nav a:not(.flex), nav button').forEach(el => {
+                        el.classList.remove('text-foreground-700', 'hover:text-foreground-950');
+                        el.classList.add('text-background-200', 'hover:text-background-50');
+                    });
+                    const cta = header.querySelector('a[href="#contact"].bg-primary-500');
+                    if (cta) { cta.style.background = ''; }
+                }
+            }
+            window.addEventListener('scroll', updateHeader);
+            updateHeader();
+
+            // Character counter for contact form
+            const msgArea = document.getElementById('contactMessage');
+            const charCount = document.getElementById('char-count');
+            if (msgArea && charCount) {
+                msgArea.addEventListener('input', () => {
+                    const remaining = 500 - msgArea.value.length;
+                    charCount.textContent = remaining + ' characters remaining';
+                });
+            }
+
+            // Form submission handler
+            const contactForm = document.getElementById('contact-form');
+            const formToast = document.getElementById('form-toast');
+            const sendBtn = document.getElementById('send-btn');
+            const sendIcon = document.getElementById('send-icon');
+            const sendLabel = document.getElementById('send-label');
+
+            if (contactForm) {
+                contactForm.addEventListener('submit', async (e) => {
+                    e.preventDefault();
+
+                    // Update UI to loading state
+                    sendBtn.disabled = true;
+                    sendIcon.classList.replace('ri-send-plane-fill', 'ri-loader-4-line');
+                    sendIcon.classList.add('animate-spin');
+                    sendLabel.textContent = 'Sending...';
+                    formToast.classList.add('hidden');
+
+                    try {
+                        const formData = new FormData(contactForm);
+                        const response = await fetch(contactForm.action, {
+                            method: 'POST',
+                            body: formData,
+                            headers: {
+                                'Accept': 'application/json'
+                            }
+                        });
+
+                        if (response.ok) {
+                            // Success state
+                            formToast.className = 'mb-5 flex flex-col gap-3 rounded-lg border px-5 py-4 text-sm bg-primary-100 border-primary-200 text-primary-800';
+                            formToast.innerHTML = `
+                                <div class="flex items-start gap-3">
+                                    <i class="ri-checkbox-circle-fill text-lg"></i>
+                                    <p><strong>Message sent successfully!</strong> We will get back to you shortly.</p>
+                                </div>
+                                <button type="button" id="toast-ok-btn" class="self-start mt-1 rounded bg-primary-600 px-5 py-2 text-xs font-semibold text-white hover:bg-primary-700 transition-colors shadow-sm">OK</button>
+                            `;
+                            contactForm.reset();
+                            if (charCount) charCount.textContent = 'Max 500 characters';
+
+                            // Handle OK button click to redirect to home/top
+                            document.getElementById('toast-ok-btn').addEventListener('click', () => {
+                                formToast.classList.add('hidden');
+                                window.location.href = '#top';
+                            });
+                        } else {
+                            // Error state from Formspree
+                            const data = await response.json();
+                            let errorMessage = 'Oops! There was a problem submitting your form.';
+                            if (Object.hasOwn(data, 'errors')) {
+                                errorMessage = data.errors.map(error => error.message).join(', ');
+                            }
+                            throw new Error(errorMessage);
+                        }
+                    } catch (error) {
+                        // General error state
+                        formToast.className = 'mb-5 flex items-start gap-3 rounded-lg border px-5 py-4 text-sm bg-accent-100 border-accent-200 text-accent-800';
+                        formToast.innerHTML = `<i class="ri-error-warning-fill text-lg"></i><p><strong>Error:</strong> ${error.message}</p>`;
+                    } finally {
+                        // Reset button state
+                        sendBtn.disabled = false;
+                        sendIcon.classList.remove('animate-spin');
+                        sendIcon.classList.replace('ri-loader-4-line', 'ri-send-plane-fill');
+                        sendLabel.textContent = 'Send message';
+                        formToast.classList.remove('hidden');
+                    }
+                });
+            }
+
+            // Intersection Observer for animations
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.fx-rise, .fx-fade').forEach(el => observer.observe(el));
+        </script>
+</body>
+
+</html>
